@@ -2,7 +2,7 @@ Duck[] bob;
 Person man;
 void setup() {
   size(500, 500);
-  frameRate(30);
+  frameRate(60);
   bob = new Duck[25];
   man = new Person();
   for (int i = 0; i < bob.length; i++) {
