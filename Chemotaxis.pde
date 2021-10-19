@@ -17,7 +17,8 @@ void draw() {
     bob[i].move();
     bob[i].show();
     if (get(mouseX, mouseY) != color(255)) {
-      text("Dead", 250, 250);
+      textSize(100);
+      text("Dead", 100, 250);
       exit();
     }
   }
