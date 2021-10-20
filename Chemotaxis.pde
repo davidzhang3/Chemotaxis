@@ -18,11 +18,7 @@ void draw() {
     bob[i].move();
     bob[i].show();
     if (get(mouseX, mouseY) != color(255)) {
-      textAlign(RIGHT,BOTTOM);
-      textSize(15);
-      text("Score: ", 460,490);
-      text(score/25,480,490);
-      textAlign(CENTER,CENTER);
+      textAlign(CENTER, CENTER);
       textSize(100);
       text("Dead", 250, 250);
       exit();
