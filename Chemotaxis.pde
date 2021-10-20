@@ -1,5 +1,6 @@
 Duck[] bob;
 Person man;
+int score = 0;
 void setup() {
   size(500, 500);
   frameRate(60);
@@ -17,8 +18,13 @@ void draw() {
     bob[i].move();
     bob[i].show();
     if (get(mouseX, mouseY) != color(255)) {
+      textAlign(RIGHT,BOTTOM);
+      textSize(15);
+      text("Score: ", 460,490);
+      text(score/25,480,490);
+      textAlign(CENTER,CENTER);
       textSize(100);
-      text("Dead", 100, 250);
+      text("Dead", 250, 250);
       exit();
     }
   }
@@ -62,6 +68,7 @@ class Person {
   void run() {
     myX = mouseX;
     myY = mouseY;
+    score++;
   }
   void show() {
     fill(255);
