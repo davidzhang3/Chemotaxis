@@ -10,7 +10,7 @@ void setup() {
   }
 }
 void draw() {
-  background(230, 230, 230);
+  background(255);
   for (int i = 0; i < bob.length; i++) {
     man.run();
     man.show();
