@@ -25,13 +25,11 @@ void draw() {
 }
 
 class Duck {
-  int myX, myY, r, g, b;
+  int myX, myY, myColor;
   Duck() {
     myX = 25;
     myY = 25;
-    r = (int)(Math.random()*257);
-    g = (int)(Math.random()*257);
-    b = (int)(Math.random()*257);
+    myColor = color((int)(Math.random()*257), (int)(Math.random()*257), (int)(Math.random()*257));
   }
   void move() {
     if (mouseX > myX) {
@@ -46,7 +44,7 @@ class Duck {
     }
   }
   void show() {
-    fill(r, g, b);
+    fill(myColor);
     ellipse(myX, myY, 20, 10);
     ellipse(myX+5, myY-5, 10, 10);
     triangle(myX+10, myY-4, myX+15, myY-4, myX+10, myY-7);
